@@ -1,14 +1,14 @@
 /*
- * Author: Laksh Bhambhani
- */
+   Author: Laksh Bhambhani
+*/
 
 #include <Servo.h>
 
-Servo FL_HIP; 
+Servo FL_HIP;
 Servo FL_FOOT;
 Servo FR_HIP;
 Servo FR_FOOT;
-Servo BL_HIP; 
+Servo BL_HIP;
 Servo BL_FOOT;
 Servo BR_HIP;
 Servo BR_FOOT;
@@ -21,8 +21,8 @@ Servo armFist;
 const int trigPin = 13; // Trig Pin of Ultrasonic Sensor
 const int echoPin = 12; // Echo Pin of Ultrasonic Sensor
 
-void setup() { 
-  FL_HIP.attach(4); 
+void setup() {
+  FL_HIP.attach(4);
   FL_FOOT.attach(5);
   FR_HIP.attach(6);
   FR_FOOT.attach(7);
@@ -35,48 +35,58 @@ void setup() {
   armElbow.attach(2);
   armWrist.attach(1);
   armFist.attach(0);
-  
+
   homePos();
 
   homePosArm();
 
   Serial.begin(9600);
- 
+
 }
 
-void loop() 
+void loop()
 {
-  int strIn = Serial.read();
-  do{
-    if(strIn == "w"){
-      walkForward();
+  while (1 == 1) {
+    if (Serial.available() > 0) {
+      String serIn = Serial.readString();
+      if (serIn == "1") {
+        Serial.write("Walking Forward");
+        for (int i = 0; i < 10; i++) {
+          walkForward();
+        }
+      }
+      else if (serIn == "2") {
+        Serial.write("Turning Left");
+        for (int i = 0; i < 10; i++) {
+          turnLeft();
+        }
+      }
+      else if(serIn == "3"){
+        Serial.write("Turning Right");
+        for (int i = 0; i < 10; i++) {
+          turnRight();
+        }
+      }
     }
-    else if(strIn == "a"){
-      turnLeft();
-    }
-    else if(strIn == "d"){
-      turnRight();
-    }
-  }while(strIn != "s");
-  
-} 
+  }
+}
 
 void avoidObstacles()
 {
   int distance = getDistance();
   homePosArm();
-  if(distance < 6)
+  if (distance < 6)
   {
     turnLeft();
     int leftDistance = getDistance();
     delay(500);
-    for(int i = 0; i <= 1; i++){
+    for (int i = 0; i <= 1; i++) {
       turnRight();
     }
     int rightDistance = getDistance();
-    if(leftDistance > rightDistance)
+    if (leftDistance > rightDistance)
     {
-      for(int i = 0; i <= 4; i++)
+      for (int i = 0; i <= 4; i++)
       {
         turnLeft();
         grabHorizontalFront();
@@ -84,7 +94,7 @@ void avoidObstacles()
     }
     else
     {
-      for(int i = 0; i <= 3; i++)
+      for (int i = 0; i <= 3; i++)
       {
         turnRight();
         grabHorizontalFront();
@@ -123,46 +133,46 @@ void leanDemo()
 
 void leanRight()
 {
- FL_FOOT.write(15);
- FR_FOOT.write(15);
- BL_FOOT.write(140);
- BR_FOOT.write(140);
+  FL_FOOT.write(15);
+  FR_FOOT.write(15);
+  BL_FOOT.write(140);
+  BR_FOOT.write(140);
 }
 
 void leanLeft()
 {
- FL_FOOT.write(140);
- FR_FOOT.write(140);
- BL_FOOT.write(15);
- BR_FOOT.write(15);
+  FL_FOOT.write(140);
+  FR_FOOT.write(140);
+  BL_FOOT.write(15);
+  BR_FOOT.write(15);
 }
 
 void homePos()
 {
- FL_HIP.write(40);
- FL_FOOT.write(110);
- FR_HIP.write(130);
- FR_FOOT.write(70);
- BL_HIP.write(130);
- BL_FOOT.write(70);
- BR_HIP.write(40);
- BR_FOOT.write(110);
+  FL_HIP.write(40);
+  FL_FOOT.write(110);
+  FR_HIP.write(130);
+  FR_FOOT.write(70);
+  BL_HIP.write(130);
+  BL_FOOT.write(70);
+  BR_HIP.write(40);
+  BR_FOOT.write(110);
 }
 
 void bow()
 {
- FL_FOOT.write(140);
- FR_FOOT.write(15);
- BL_FOOT.write(130);
- BR_FOOT.write(30);
+  FL_FOOT.write(140);
+  FR_FOOT.write(15);
+  BL_FOOT.write(130);
+  BR_FOOT.write(30);
 }
 
 void bendBack()
 {
- FL_FOOT.write(30);
- FR_FOOT.write(130);
- BL_FOOT.write(15);
- BR_FOOT.write(140);
+  FL_FOOT.write(30);
+  FR_FOOT.write(130);
+  BL_FOOT.write(15);
+  BR_FOOT.write(140);
 }
 
 void turnLeft()
@@ -268,71 +278,71 @@ void turnRight()
 }
 
 void walkForward()
-{ 
- FR_FOOT.write(50);
- BL_FOOT.write(50);
+{
+  FR_FOOT.write(50);
+  BL_FOOT.write(50);
 
- delay(200);
-  
- FR_HIP.write(150);
- BL_HIP.write(110);
- FL_HIP.write(60);
- BR_HIP.write(20);
+  delay(200);
 
- delay(200);
+  FR_HIP.write(150);
+  BL_HIP.write(110);
+  FL_HIP.write(60);
+  BR_HIP.write(20);
 
- FR_FOOT.write(70);
- BL_FOOT.write(70);
+  delay(200);
 
- delay(200);
+  FR_FOOT.write(70);
+  BL_FOOT.write(70);
 
- FL_FOOT.write(130);
- BR_FOOT.write(130);
+  delay(200);
 
- delay(200);
+  FL_FOOT.write(130);
+  BR_FOOT.write(130);
 
- FL_HIP.write(20);
- BR_HIP.write(60);
- FR_HIP.write(110);
- BL_HIP.write(150);
+  delay(200);
 
- delay(200);
+  FL_HIP.write(20);
+  BR_HIP.write(60);
+  FR_HIP.write(110);
+  BL_HIP.write(150);
 
- FL_FOOT.write(110);
- BR_FOOT.write(110);
+  delay(200);
 
- delay(200);
- 
+  FL_FOOT.write(110);
+  BR_FOOT.write(110);
+
+  delay(200);
+
 }
 
 long microsecondsToInches(long microseconds) {
-   return microseconds / 74 / 2;
+  return microseconds / 74 / 2;
 }
 
 long microsecondsToCentimeters(long microseconds) {
-   return microseconds / 29 / 2;
+  return microseconds / 29 / 2;
 }
 
 int getDistance()
 {
-   long duration, inches, cm;
-   pinMode(trigPin, OUTPUT);
-   digitalWrite(trigPin, LOW);
-   delayMicroseconds(2);
-   digitalWrite(trigPin, HIGH);
-   delayMicroseconds(10);
-   digitalWrite(trigPin, LOW);
-   pinMode(echoPin, INPUT);
-   duration = pulseIn(echoPin, HIGH);
-   inches = microsecondsToInches(duration);
-   cm = microsecondsToCentimeters(duration);
-   Serial.print(inches);
-   Serial.print("in, ");
-   Serial.print(cm);
-   Serial.print("cm");
-   Serial.println();
-   delay(100);
-   return cm;
+  long duration, inches, cm;
+  pinMode(trigPin, OUTPUT);
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  pinMode(echoPin, INPUT);
+  duration = pulseIn(echoPin, HIGH);
+  inches = microsecondsToInches(duration);
+  cm = microsecondsToCentimeters(duration);
+  Serial.print(inches);
+  Serial.print("in, ");
+  Serial.print(cm);
+  Serial.print("cm");
+  Serial.println();
+  delay(100);
+  return cm;
 }
 
 void homePosArm()
