@@ -8,7 +8,7 @@ ser.flushInput()
 
 # The function below is executed when someone requests a URL with the pin number and action in it:
 @app.route("/<action>")
-def action(changePin, action):
+def action(action):
    if action == "walkforward":
       ser.write("1")
       message = "Walking Forward"
