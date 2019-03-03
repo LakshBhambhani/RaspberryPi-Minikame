@@ -35,6 +35,8 @@ def action(changePin, action):
    # Get the device name for the pin being changed:
    deviceName = pins[changePin]['name']
    # If the action part of the URL is "on," execute the code indented below:
+   if changePin >= 26:
+      
    if action == "on":
       # Set the pin high:
       GPIO.output(changePin, GPIO.HIGH)
