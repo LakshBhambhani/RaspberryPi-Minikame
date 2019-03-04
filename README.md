@@ -17,4 +17,4 @@ mkdir RaspberryPiMinikame && cd RaspberryPiMinikame
 ```
 ## Raspi Minikame Serial Code Sheet
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://github.com/LakshBhambhani/RaspberryPi-Minikame-/blob/master/Pictures/Screen%20Shot%202019-03-04%20at%201.10.27%20PM.png)
