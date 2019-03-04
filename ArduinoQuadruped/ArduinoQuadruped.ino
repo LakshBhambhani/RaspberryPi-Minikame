@@ -50,95 +50,95 @@ void loop()
     if (Serial.available() > 0) {
       String serIn = Serial.readString();
       if (serIn == "1") {
-        Serial.write("Walking Forward");
+        Serial.println("Walking Forward");
         for (int i = 0; i < 10; i++) {
           walkForward();
         }
       }
       else if (serIn == "2") {
-        Serial.write("Turning Left");
+        Serial.println("Turning Left");
         for (int i = 0; i < 10; i++) {
           turnLeft();
         }
       }
       else if(serIn == "3"){
-        Serial.write("Turning Right");
+        Serial.println("Turning Right");
         for (int i = 0; i < 10; i++) {
           turnRight();
         }
       }
       else if(serIn == "4"){
-        Serial.write("Leaning Right");
+        Serial.println("Leaning Right");
         for (int i = 0; i < 10; i++) {
           leanRight();
         }
       }
       else if(serIn == "5"){
-        Serial.write("Leaning Left");
+        Serial.println("Leaning Left");
         leanLeft();
       }
       else if(serIn == "6"){
-        Serial.write("Switching to Home Position");
+        Serial.println("Switching to Home Position");
         homePos();
       }
       else if(serIn == "7"){
-        Serial.write("Bowing");
+        Serial.println("Bowing");
         bow();
       }
       else if(serIn == "8"){
-        Serial.write("Bending Back");
+        Serial.println("Bending Back");
         bendBack();
       }
       else if(serIn == "9"){
-        Serial.write("Switching to Home Position Arm");
+        Serial.println("Switching to Home Position Arm");
         homePosArm();
       }
       else if(serIn == "10"){
-        Serial.write("Grabbing Horizontal Front");
+        Serial.println("Grabbing Horizontal Front");
         grabHorizontalFront();
       }
       else if(serIn == "11"){
-        Serial.write("Grabbing Vertical Front");
+        Serial.println("Grabbing Vertical Front");
         grabVerticalFront();
       }
       else if(serIn == "12"){
-        Serial.write("Grabbing Horizontal Back");
+        Serial.println("Grabbing Horizontal Back");
         grabHorizontalBack();
       }
       else if(serIn == "13"){
-        Serial.write("Grabbing Vertical Back");
+        Serial.println("Grabbing Vertical Back");
         grabVerticalBack();
       }
       else if(serIn == "14"){
-        Serial.write("Releasing Horizontal Front");
+        Serial.println("Releasing Horizontal Front");
         releaseHorizontalFront();
       }
       else if(serIn == "15"){
-        Serial.write("Releasing Vertical Front");
+        Serial.println("Releasing Vertical Front");
         releaseVerticalFront();
       }
       else if(serIn == "16"){
-        Serial.write("Releasing Horizontal Back");
+        Serial.println("Releasing Horizontal Back");
         releaseHorizontalBack();
       }
       else if(serIn == "17"){
-        Serial.write("Releasing Vertical Back");
+        Serial.println("Releasing Vertical Back");
         releaseVerticalBack();
       }
       else if(serIn == "18"){
-        Serial.write("Avoiding Obstacles");
+        Serial.println("Avoiding Obstacles");
         for (int i = 0; i < 20; i++) {
           avoidObstacles();
         }
       }
       else if(serIn == "19"){
-        Serial.write("Starting Arm Demo");
+        Serial.println("Starting Arm Demo");
         for (int i = 0; i < 10; i++) {
           armDemo();
         }
       }
       else if(serIn == "20"){
-        Serial.write("Staring Lean Demo");
+        Serial.println("Staring Lean Demo");
         for (int i = 0; i < 10; i++) {
           leanDemo();
         }
