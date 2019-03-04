@@ -18,9 +18,6 @@ Servo armElbow;
 Servo armWrist;
 Servo armFist;
 
-const int trigPin = 13; // Trig Pin of Ultrasonic Sensor
-const int echoPin = 12; // Echo Pin of Ultrasonic Sensor
-
 void setup() {
   FL_HIP.attach(4);
   FL_FOOT.attach(5);
