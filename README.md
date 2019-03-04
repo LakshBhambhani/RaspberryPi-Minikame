@@ -15,3 +15,6 @@ sudo apt-get update
 sudo apt-get upgrade
 mkdir RaspberryPiMinikame && cd RaspberryPiMinikame
 ```
+## Raspi Minikame Serial Code Sheet
+
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
