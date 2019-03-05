@@ -6,64 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
-
     <Button
         android:id="@+id/walkForward"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginEnd="8dp"
         android:onClick="onClick"
         android:text="Forward"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/leanRight"
+        app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toEndOf="@+id/leanLeft"
         app:layout_constraintTop_toBottomOf="@+id/bow" />
 
     <Button
         android:id="@+id/turnLeft"
-        android:layout_width="120"
+        android:layout_width="95dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="16dp"
         android:text="Left"
-        app:layout_constraintEnd_toStartOf="@+id/homePos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/leanLeft" />
 
     <Button
         android:id="@+id/turnRight"
-        android:layout_width="120dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Right"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,16 +45,18 @@
 
     <Button
         android:id="@+id/homePos"
-        android:layout_width="100"
-        android:layout_height="50"
-        android:layout_marginTop="12dp"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="Stop"
-        app:layout_constraintTop_toBottomOf="@+id/walkForward"
-        tools:layout_editor_absoluteX="155dp" />
+        app:layout_constraintEnd_toStartOf="@+id/turnRight"
+        app:layout_constraintStart_toEndOf="@+id/turnLeft"
+        app:layout_constraintTop_toBottomOf="@+id/walkForward" />
 
     <Button
         android:id="@+id/leanLeft"
-        android:layout_width="120dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
@@ -92,34 +66,30 @@
 
     <Button
         android:id="@+id/leanRight"
-        android:layout_width="120dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Lean Right"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/walkForward"
         app:layout_constraintTop_toBottomOf="@+id/bow" />
 
     <Button
         android:id="@+id/bow"
-        android:layout_width="390"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Bow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <Button
         android:id="@+id/bendBack"
-        android:layout_width="390"
-        android:layout_height="50"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -131,10 +101,11 @@
 
     <WebView
         android:id="@+id/web"
-        android:layout_width="390"
-        android:layout_height="200dp"
+        android:layout_width="0dp"
+        android:layout_height="201dp"
         android:layout_marginTop="12dp"
         android:visibility="visible"
         app:layout_constraintTop_toBottomOf="@+id/bendBack"
         tools:layout_editor_absoluteX="10dp" />
+
 </android.support.constraint.ConstraintLayout>
