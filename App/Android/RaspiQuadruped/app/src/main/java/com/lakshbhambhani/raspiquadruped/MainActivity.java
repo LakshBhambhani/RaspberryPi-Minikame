@@ -8,6 +8,8 @@ import android.view.View;
 import android.net.Uri;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.WebSettings;
+import android.webkit.*;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -52,7 +54,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bendBack.setOnClickListener(this);
 
         web = (WebView) findViewById(R.id.web);
-        web.loadUrl("https://www.google.com");
+        WebSettings webSettings = web.getSettings();
+        web.getSettings().setLoadWithOverviewMode(true);
+        web.getSettings().setUseWideViewPort(true);
+        web.getSettings().setBuiltInZoomControls(true);
+        web.loadUrl("http://192.168.0.36");
     }
 
     @Override
@@ -62,49 +68,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(v.getId() == R.id.walkForward) {
             web.setWebViewClient(new WebViewClient());
-            web.loadUrl("192.168.0.36/walkForward");
+            web.loadUrl("http://192.168.0.36/walkForward");
             System.out.println("Walking Forward Triggered");
+            System.out.println(web.getUrl());
         }
 
         if(v.getId() == R.id.turnLeft) {
             web.setWebViewClient(new WebViewClient());
-            web.loadUrl("192.168.0.36/turnLeft");
+            web.loadUrl("http://192.168.0.36/turnLeft");
             System.out.println("Turning Left Triggered");
         }
 
         if(v.getId() == R.id.turnRight) {
             web.setWebViewClient(new WebViewClient());
-            web.loadUrl("192.168.0.36/turnRight");
+            web.loadUrl("http://192.168.0.36/turnRight");
             System.out.println("Turning Right Triggered");
         }
 
         if(v.getId() == R.id.leanRight) {
             web.setWebViewClient(new WebViewClient());
-            web.loadUrl("192.168.0.36/leanRight");
+            web.loadUrl("http://192.168.0.36/leanRight");
             System.out.println("Leaning Right Triggered");
         }
 
         if(v.getId() == R.id.leanLeft) {
             web.setWebViewClient(new WebViewClient());
-            web.loadUrl("192.168.0.36/leanLeft");
+            web.loadUrl("http://192.168.0.36/leanLeft");
             System.out.println("Leaning Left Triggered");
         }
 
         if(v.getId() == R.id.homePos) {
             web.setWebViewClient(new WebViewClient());
-            web.loadUrl("192.168.0.36/homePos");
+            web.loadUrl("http://192.168.0.36/homePos");
             System.out.println("Home Position Triggered");
         }
 
         if(v.getId() == R.id.bow) {
             web.setWebViewClient(new WebViewClient());
-            web.loadUrl("192.168.0.36/bow");
+            web.loadUrl("http://192.168.0.36/bow");
             System.out.println("Bowing Triggered");
         }
 
         if(v.getId() == R.id.bendBack) {
             web.setWebViewClient(new WebViewClient());
-            web.loadUrl("192.168.0.36/bendBack");
+            web.loadUrl("http://192.168.0.36/bendBack");
             System.out.println("Bending Back Triggered");
         }
     }
