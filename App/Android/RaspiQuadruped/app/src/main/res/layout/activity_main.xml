@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+    <Button
+        android:id="@+id/walkForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="84dp"
+        android:onClick="onClick"
+        android:text="Forward"
+        app:layout_constraintStart_toEndOf="@+id/leanLeft"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/turnLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="Left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leanLeft" />
+
+    <Button
+        android:id="@+id/turnRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:text="Right"
+        app:layout_constraintStart_toEndOf="@+id/homePos"
+        app:layout_constraintTop_toBottomOf="@+id/leanRight" />
+
+    <Button
+        android:id="@+id/homePos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="28dp"
+        android:text="Stop"
+        app:layout_constraintStart_toStartOf="@+id/turnLeft"
+        app:layout_constraintTop_toBottomOf="@+id/walkForward" />
+
+    <Button
+        android:id="@+id/leanLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Lean Left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bow" />
+
+    <Button
+        android:id="@+id/leanRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="Lean Right"
+        app:layout_constraintStart_toEndOf="@+id/walkForward"
+        app:layout_constraintTop_toBottomOf="@+id/bow" />
+
+    <Button
+        android:id="@+id/bow"
+        android:layout_width="353dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="Bow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/bendBack"
+        android:layout_width="347dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="Bend Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homePos" />
+
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="351dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bendBack" />
+</android.support.constraint.ConstraintLayout>
