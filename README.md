@@ -1,5 +1,5 @@
-# RaspberryPi-Minikame-
-Contains the code to use Minikame using a raspberry pi
+# RaspberryPi-Minikame
+Contains the code to use Minikame Mk2 using a raspberry pi
 
 ## The Arduino Code
 
