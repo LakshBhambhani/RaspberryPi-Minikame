@@ -1,6 +1,12 @@
 # RaspberryPi-Minikame
 Contains the code to use Minikame Mk2 using a raspberry pi
 
+## Required Components
+
+* Raspberry Pi
+* Arduino
+* 3D Printed Parts
+
 ## 3D Printing
 
 | Quantity      | File           
