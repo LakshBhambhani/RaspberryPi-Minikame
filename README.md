@@ -6,6 +6,7 @@ Contains the code to use Minikame Mk2 using a raspberry pi
 * Raspberry Pi
 * Arduino
 * 3D Printed Parts
+* 12 Servo Motors [Amazon](https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD/ref=sr_1_1?keywords=servo+mototrs&qid=1551854557&s=gateway&sr=8-1-spell)
 
 ## 3D Printing
 
@@ -25,9 +26,44 @@ Contains the code to use Minikame Mk2 using a raspberry pi
 | 1             | drive_gear.stl
 | 1             | driven_gear.stl 
 
-## The Arduino Code
+## Required Software
 
-Find the code to upload to the Arduino in the ArduinoQuadruped Folder and upload the .ino to your board
+* Arduino IDE [Download](https://www.arduino.cc/en/Main/Software) 
+
+Download the Arduino IDE Linux-ARM version on your Raspberry Pi
+
+## Pre-Assembly Software and Hardware Check
+
+### Serial Communication Check (optional)
+1) Upload the "PiArduinoCommunicationTest.ino" which is in "RaspberryPi-Minikame/Pre-Assembly Checks/Serial Communication Check/" to your Arduino Board.
+2) Open a new terminal on your Raspberry Pi adn execute the following:
+
+```
+sudo apt-get update 
+sudo apt-get upgrade
+git clone https://github.com/LakshBhambhani/RaspberryPi-Minikame.git
+cd RaspberryPi-Minikame/Pre-Assembly Checks/Serial Communication Check/
+sudo python pi_duino.py
+```
+Open the serial Monitor on the Arduino IDE and check for "hi" and "hello" being printed
+
+### Server Check (optional)
+
+1) On the same terminal as before execute the following:
+
+```
+cd ..
+cd Server Check
+sudo python weblamp.py
+```
+
+Now if you load the URL on browser, you should see a weblamp control page. Your URL would be the IP address of your raspberry pi. Ex: 192.168.0.36
+
+### Homing all Servos
+
+Number your servos and upload the following code to arduino to home your servos. Remember: Each servo has been set to a different home location. So each one has a different use and cannot be mixed up randomly later.
+
+
 
 ## The Server
 
@@ -42,6 +78,10 @@ cd RaspberryPi-Minikame
 cd Server
 sudo python quad.py
 ```
+
+## The Arduino Code
+
+Find the code to upload to the Arduino in the ArduinoQuadruped Folder and upload the .ino to your board
 ## Raspi Minikame Serial Code Sheet
 
 | Sybsystem     | Method            | Arduino Value
