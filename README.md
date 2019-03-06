@@ -29,6 +29,33 @@ Contains the code to use Minikame Mk2 using a raspberry pi
 
 Find the code to upload to the Arduino in the ArduinoQuadruped Folder and upload the .ino to your board
 
+## Pre-Assembly Software and Hardware Check (optional)
+
+### Serial Communication Check
+1) Upload the "PiArduinoCommunicationTest.ino" to your Arduino Board.
+2) Open a new terminal on your Raspberry Pi adn execute the following:
+
+```
+sudo apt-get update 
+sudo apt-get upgrade
+git clone https://github.com/LakshBhambhani/RaspberryPi-Minikame.git
+cd RaspberryPi-Minikame/Pre-Assembly Checks/Serial Communication Check/
+sudo python pi_duino.py
+```
+Open the serial Monitor on the Arduino IDE and check for "hi" and "hello" being printed
+
+### Server Check 
+
+1) On the same terminal as before execute the following:
+
+```
+cd ..
+cd Server Check
+sudo python weblamp.py
+```
+
+Now if you load the URL on browser, you should see a weblamp control page. Your URL would be the IP address of your raspberry pi. Ex: 192.168.0.36
+
 ## The Server
 
 You might want to check if your server works by using the files in the Server Check Folder. You might need to update and upgrade before 
