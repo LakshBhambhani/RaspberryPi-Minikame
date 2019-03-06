@@ -32,9 +32,9 @@ Contains the code to use Minikame Mk2 using a raspberry pi
 
 Download the Arduino IDE Linux-ARM version on your Raspberry Pi
 
-## Pre-Assembly Software and Hardware Check (optional)
+## Pre-Assembly Software and Hardware Check
 
-### Serial Communication Check
+### Serial Communication Check (optional)
 1) Upload the "PiArduinoCommunicationTest.ino" which is in "RaspberryPi-Minikame/Pre-Assembly Checks/Serial Communication Check/" to your Arduino Board.
 2) Open a new terminal on your Raspberry Pi adn execute the following:
 
@@ -47,7 +47,7 @@ sudo python pi_duino.py
 ```
 Open the serial Monitor on the Arduino IDE and check for "hi" and "hello" being printed
 
-### Server Check 
+### Server Check (optional)
 
 1) On the same terminal as before execute the following:
 
