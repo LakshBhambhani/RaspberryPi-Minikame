@@ -37,7 +37,7 @@ doing stuff
 ```
 sudo apt-get update
 sudo apt-get upgrade
-git clone https://github.com/LakshBhambhani/RaspberryPi-Minikame-.git
+git clone https://github.com/LakshBhambhani/RaspberryPi-Minikame.git
 cd RaspberryPi-Minikame
 cd Server
 sudo python quad.py
