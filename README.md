@@ -1,5 +1,29 @@
-# RaspberryPi-Minikame-
-Contains the code to use Minikame using a raspberry pi
+# RaspberryPi-Minikame
+Contains the code to use Minikame Mk2 using a raspberry pi
+
+## Required Components
+
+* Raspberry Pi
+* Arduino
+* 3D Printed Parts
+
+## 3D Printing
+
+| Quantity      | File           
+| ------------- | ----------------- 
+| 1             | body_base.stl    
+| 1             | body_top.stl        
+| 2             | leg.stl      
+| 2             | hips.stl      
+| 1             | body_shafts.stl     
+| 1             | arm_base.stl         
+| 2             | shoulder.stl             
+| 1             | elbow.stl        
+| 1             | claw.stl      
+| 1             | left_finger.stl         
+| 1             | right_finger.stl        
+| 1             | drive_gear.stl
+| 1             | driven_gear.stl 
 
 ## The Arduino Code
 
@@ -13,7 +37,10 @@ doing stuff
 ```
 sudo apt-get update
 sudo apt-get upgrade
-mkdir RaspberryPiMinikame && cd RaspberryPiMinikame
+git clone https://github.com/LakshBhambhani/RaspberryPi-Minikame.git
+cd RaspberryPi-Minikame
+cd Server
+sudo python quad.py
 ```
 ## Raspi Minikame Serial Code Sheet
 
