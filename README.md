@@ -1,6 +1,24 @@
 # RaspberryPi-Minikame
 Contains the code to use Minikame Mk2 using a raspberry pi
 
+## 3D Printing
+
+| Quantity      | File           
+| ------------- | ----------------- 
+| 1             | body_base.stl    
+| 1             | body_top.stl        
+| 2             | leg.stl      
+| 2             | hips.stl      
+| 1             | body_shafts.stl     
+| 1             | arm_base.stl         
+| 2             | shoulder.stl             
+| 1             | elbow.stl        
+| 1             | claw.stl      
+| 1             | left_finger.stl         
+| 1             | right_finger.stl        
+| 1             | drive_gear.stl
+| 1             | driven_gear.stl 
+
 ## The Arduino Code
 
 Find the code to upload to the Arduino in the ArduinoQuadruped Folder and upload the .ino to your board
