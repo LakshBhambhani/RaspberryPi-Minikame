@@ -34,7 +34,7 @@ mkdir RaspberryPiMinikame && cd RaspberryPiMinikame
 |               | verticalFront()   | 13
 |               | horizontalBack()  | 14
 |               | verticalBack()    | 15
-| Demo          | avoidObstacles    | 16
+| Demo          | avoidObstacles()  | 16
 |               | armDemo()         | 17
 |               | leanDemo()        | 18
 
