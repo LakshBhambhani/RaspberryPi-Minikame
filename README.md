@@ -6,7 +6,7 @@ Contains the code to use Minikame Mk2 using a raspberry pi
 * Raspberry Pi
 * Arduino
 * 3D Printed Parts
-* 12 Servo Motors [Amazon](https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD/ref=sr_1_1?keywords=servo+mototrs&qid=1551854557&s=gateway&sr=8-1-spell)
+* 12 Servo Motors from: [Amazon](https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD/ref=sr_1_1?keywords=servo+mototrs&qid=1551854557&s=gateway&sr=8-1-spell)
 
 ## 3D Printing
 
@@ -63,7 +63,7 @@ Now if you load the URL on browser, you should see a weblamp control page. Your 
 
 Number your servos and upload the following code to arduino to home your servos. Remember: Each servo has been set to a different home location. So each one has a different use and cannot be mixed up randomly later.
 
-
+[Code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/Pre-Assembly%20Checks/Homing%20Servos/HomeAllServos/HomeAllServos.ino)
 
 ## The Server
 
