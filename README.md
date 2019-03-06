@@ -17,9 +17,26 @@ mkdir RaspberryPiMinikame && cd RaspberryPiMinikame
 ```
 ## Raspi Minikame Serial Code Sheet
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Sybsystem     | Method            | Arduino Value
+| ------------- | ----------------- | ------------- 
+| Quadruped     | walkForward()     | 1
+|               | turnLeft()        | 2
+|               | turnRight()       | 3
+|               | leanRight()       | 4
+|               | leanLeft()        | 5
+|               | homePos()         | 6
+|               | bow()             | 7
+|               | bendBack()        | 8
+|               |                   | 
+| Arm           | homePosArm()      | 9
+|               | grab()            | 10
+|               | release()         | 11
+|               | horizontalFront() | 12
+|               | verticalFront()   | 13
+|               | horizontalBack()  | 14
+|               | verticalBack()    | 15
+|               |                   | 
+| Demo          | avoidObstacles    | 16
+|               | armDemo()         | 17
+|               | leanDemo()        | 18
 
-![alt text](https://github.com/LakshBhambhani/RaspberryPi-Minikame-/blob/master/Pictures/Screen%20Shot%202019-03-04%20at%201.10.27%20PM.png)
