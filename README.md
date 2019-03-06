@@ -69,13 +69,9 @@ Number your servos and upload the following code to arduino to home your servos.
 
 ## The Server
 
-You might want to check if your server works by using the files in the Server Check Folder. You might need to update and upgrade before 
-doing stuff
+Execute the following in your terminal to get your server up and running. For now, you might have to execute the server python file each time your pi reboots. V2 of RaspberryPi-Minikame should get rid of that
 
 ```
-sudo apt-get update
-sudo apt-get upgrade
-git clone https://github.com/LakshBhambhani/RaspberryPi-Minikame.git
 cd RaspberryPi-Minikame
 cd Server
 sudo python quad.py
