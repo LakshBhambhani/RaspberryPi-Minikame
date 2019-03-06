@@ -94,50 +94,42 @@ void loop()
         homePosArm();
       }
       else if(serIn == "10"){
-        Serial.println("Grabbing Horizontal Front");
-        grabHorizontalFront();
+        Serial.println("Grabbing");
+        grab();
       }
       else if(serIn == "11"){
-        Serial.println("Grabbing Vertical Front");
-        grabVerticalFront();
+        Serial.println("Releasing");
+        release();
       }
       else if(serIn == "12"){
-        Serial.println("Grabbing Horizontal Back");
-        grabHorizontalBack();
+        Serial.println("Switching to Horizontal Front");
+        horizontalFront();
       }
       else if(serIn == "13"){
-        Serial.println("Grabbing Vertical Back");
-        grabVerticalBack();
+        Serial.println("Switching to Vertical Front");
+        verticalFront();
       }
       else if(serIn == "14"){
-        Serial.println("Releasing Horizontal Front");
-        releaseHorizontalFront();
+        Serial.println("Switching to Horizontal Back");
+        horizontalBack();
       }
       else if(serIn == "15"){
-        Serial.println("Releasing Vertical Front");
-        releaseVerticalFront();
+        Serial.println("Switching to Vertical Back");
+        verticalBack();
       }
       else if(serIn == "16"){
-        Serial.println("Releasing Horizontal Back");
-        releaseHorizontalBack();
-      }
-      else if(serIn == "17"){
-        Serial.println("Releasing Vertical Back");
-        releaseVerticalBack();
-      }
-      else if(serIn == "18"){
         Serial.println("Avoiding Obstacles");
         for (int i = 0; i < 20; i++) {
           avoidObstacles();
         }
       }
-      else if(serIn == "19"){
+      else if(serIn == "17"){
         Serial.println("Starting Arm Demo");
         for (int i = 0; i < 10; i++) {
           armDemo();
         }
       }
-      else if(serIn == "20"){
+      else if(serIn == "18"){
         Serial.println("Staring Lean Demo");
         for (int i = 0; i < 10; i++) {
           leanDemo();
@@ -165,7 +157,6 @@ void avoidObstacles()
       for (int i = 0; i <= 4; i++)
       {
         turnLeft();
-        grabHorizontalFront();
       }
     }
     else
@@ -173,7 +164,6 @@ void avoidObstacles()
       for (int i = 0; i <= 3; i++)
       {
         turnRight();
-        grabHorizontalFront();
       }
     }
   }
@@ -185,13 +175,29 @@ void avoidObstacles()
 
 void armDemo()
 {
-  grabHorizontalFront();
+  horizontalFront();
+  delay(1000);
+  grab();
   delay(700);
-  releaseHorizontalBack();
+  homePosArm();
   delay(700);
-  grabVerticalFront();
+  horizontalBack();
+  delay(1000);
+  release();
   delay(700);
-  releaseVerticalBack();
+  homePosArm();
+  delay(700);
+  verticalFront();
+  delay(1000);
+  grab();
+  delay(700);
+  homePosArm();
+  delay(700);
+  verticalBack();
+  delay(1000);
+  release();
+  delay(700);
+  homePosArm();
   delay(700);
 }
 
@@ -430,104 +436,46 @@ void homePosArm()
   armFist.write(0);
 }
 
-void grabHorizontalFront()
-{
-  bow();
-  armFist.write(90);
-  armShoulder.write(170);
-  armElbow.write(130);
-  armWrist.write(90);
-  delay(1000);
+void grab(){
   armFist.write(0);
   delay(700);
-  homePosArm();
 }
 
-void grabVerticalFront()
-{
-  bow();
+void release(){
   armFist.write(90);
-  armShoulder.write(170);
-  armElbow.write(130);
-  armWrist.write(0);
-  delay(1000);
-  armFist.write(0);
   delay(700);
-  homePosArm();
 }
 
-void grabHorizontalBack()
-{
-  bendBack();
-  armFist.write(90);
-  armShoulder.write(40);
-  armElbow.write(0);
-  armWrist.write(90);
-  delay(1000);
-  armFist.write(0);
-  delay(700);
-  homePosArm();
-}
-
-void grabVerticalBack()
-{
-  bendBack();
-  armFist.write(90);
-  armShoulder.write(40);
-  armElbow.write(0);
-  armWrist.write(0);
-  delay(1000);
-  armFist.write(0);
-  delay(700);
-  homePosArm();
-}
-
-void releaseHorizontalFront()
+void horizontalFront()
 {
   bow();
   armShoulder.write(170);
   armElbow.write(130);
   armWrist.write(90);
-  delay(1000);
-  armFist.write(90);
-  delay(700);
-  homePosArm();
 }
 
-void releaseVerticalFront()
+void verticalFront()
 {
   bow();
   armShoulder.write(170);
   armElbow.write(130);
   armWrist.write(0);
-  delay(1000);
-  armFist.write(90);
-  delay(700);
-  homePosArm();
 }
 
-void releaseHorizontalBack()
+void horizontalBack()
 {
   bendBack();
   armShoulder.write(40);
   armElbow.write(0);
   armWrist.write(90);
-  delay(1000);
-  armFist.write(90);
-  delay(700);
-  homePosArm();
 }
 
-void releaseVerticalBack()
+void verticalBack()
 {
   bendBack();
   armShoulder.write(40);
   armElbow.write(0);
   armWrist.write(0);
-  delay(1000);
-  armFist.write(90);
-  delay(700);
-  homePosArm();
 }
 
 void homePosGrabBall()

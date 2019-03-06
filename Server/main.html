@@ -4,11 +4,11 @@
 </head>
 
 <body>
-   <h1>Raspi Quadruped Status</h1>
 
-   Port: <input type="text" name="port">
-   <a href="set/port.text"><input type="submit"></a>
-   <br>
+   <h1>Port</h1>
+   <a href="/1/toggle">Toggle</a>
+
+   <h1>Raspberry Pin Status</h1>
 
    {% for pin in pins %}
    <p>The {{ pins[pin].name }}
@@ -21,12 +21,36 @@
    {% endfor %}
 
    <h1>The Quad</h1>
-   var x = 0
-   <a href="walkForward">Walk Forward</a>
-   <a href="turnLeft">Turn Left</a>
-   <a href="turnRight">Turn RIght</a>
+   <a href="/walkForward">Walk Forward</a>
+   <a href="/turnLeft">Turn Left</a>
+   <a href="/turnRight">Turn Right</a>
+   <br>
+   <a href="/leanRight">Lean Right</a>
+   <a href="/leanLeft">Lean Left</a>
+   <br>
+   <a href="/homePos">Home Position</a>
+   <a href="/bow">Bow</a>
+   <a href="/bendBack">Bend Back</a>
+
+   <h1>The Arm</h1>
+   <a href="/homePosArm">Home Position Arm</a>
+   <br>
+   <a href="/grab">Grab Horizontal Front</a>
+   <a href="/release">Grab Vertical Front</a>
+   <br>
+   <a href="/horizontalFront">Grab Horizontal Back</a>
+   <a href="/verticalFront">Grab Vertical Back</a>
+   <br>
+   <a href="/horizontalBack">Release Horizontal Front</a>
+   <a href="/verticalBack">Release Vertical Front</a>
+   
+   <h1>Demos</h1>
+   <a href="/avoidObstacles">Avoid Obstacles</a>
+   <a href="/armDemo">Arm Demo</a>
+   <a href="/leanDemo">Lean Demo</a>
 
    {% if message %}
+   <h2>Current Command: </h2>
    <h2>{{ message }}</h2>
    {% endif %}
 
