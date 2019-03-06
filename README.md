@@ -17,4 +17,9 @@ mkdir RaspberryPiMinikame && cd RaspberryPiMinikame
 ```
 ## Raspi Minikame Serial Code Sheet
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 ![alt text](https://github.com/LakshBhambhani/RaspberryPi-Minikame-/blob/master/Pictures/Screen%20Shot%202019-03-04%20at%201.10.27%20PM.png)
