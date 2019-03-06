@@ -13,7 +13,10 @@ doing stuff
 ```
 sudo apt-get update
 sudo apt-get upgrade
-mkdir RaspberryPiMinikame && cd RaspberryPiMinikame
+git clone https://github.com/LakshBhambhani/RaspberryPi-Minikame-.git
+cd RaspberryPi-Minikame
+cd Server
+sudo python quad.py
 ```
 ## Raspi Minikame Serial Code Sheet
 
