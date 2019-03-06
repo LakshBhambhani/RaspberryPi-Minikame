@@ -59,11 +59,13 @@ sudo python weblamp.py
 
 Now if you load the URL on browser, you should see a weblamp control page. Your URL would be the IP address of your raspberry pi. Ex: 192.168.0.36
 
-### Homing all Servos
+### Homing all Servos (MUST-DO)
 
 Number your servos and upload the following code to arduino to home your servos. Remember: Each servo has been set to a different home location. So each one has a different use and cannot be mixed up randomly later.
 
-[Code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/Pre-Assembly%20Checks/Homing%20Servos/HomeAllServos/HomeAllServos.ino)
+[Link to HomingServos.ino Code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/Pre-Assembly%20Checks/Homing%20Servos/HomeAllServos/HomeAllServos.ino)
+
+## Assembly
 
 ## The Server
 
@@ -81,7 +83,14 @@ sudo python quad.py
 
 ## The Arduino Code
 
-Find the code to upload to the Arduino in the ArduinoQuadruped Folder and upload the .ino to your board
+[Link to Quadruped Robot code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/ArduinoQuadruped/ArduinoQuadruped.ino)
+
+## Raspi Quadruped App
+
+You can either modify the app for yourself using the files in the [App Folder](https://github.com/LakshBhambhani/RaspberryPi-Minikame/tree/master/App/Android/RaspiQuadruped) or use the default provided [apk](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/App/Android/RaspiQuadruped.apk)
+
+## ENJOY!! 
+
 ## Raspi Minikame Serial Code Sheet
 
 | Sybsystem     | Method            | Arduino Value
