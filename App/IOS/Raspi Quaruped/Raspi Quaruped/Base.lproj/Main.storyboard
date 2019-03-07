@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,38 +13,116 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Raspi_Quaruped" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7fh-lf-RAh"/>
+                        <viewControllerLayoutGuide type="bottom" id="poU-Jf-bQS"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5X-P7-8gG">
-                                <rect key="frame" x="-2" y="29" width="379" height="40"/>
-                                <color key="backgroundColor" red="0.74570919689119175" green="0.74570919689119175" blue="0.74570919689119175" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-Yx-vyS">
+                                <rect key="frame" x="8" y="8" width="552" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5X-P7-8gG">
+                                        <rect key="frame" x="0.0" y="0.0" width="552" height="30"/>
+                                        <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Bow">
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-LW-iJR">
+                                <rect key="frame" x="8" y="46" width="552" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD7-5g-Kla">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="37"/>
+                                        <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Lean Left"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDf-vF-iat">
+                                        <rect key="frame" x="184" y="0.0" width="184" height="37"/>
+                                        <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Forward"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEb-tZ-JyL">
+                                        <rect key="frame" x="368" y="0.0" width="184" height="37"/>
+                                        <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Lean Right"/>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ZHh-41-gwq"/>
-                                    <constraint firstAttribute="width" constant="375" id="dCi-gn-uhI"/>
+                                    <constraint firstItem="JDf-vF-iat" firstAttribute="width" secondItem="AD7-5g-Kla" secondAttribute="width" id="A2y-Al-sz9"/>
+                                    <constraint firstItem="JDf-vF-iat" firstAttribute="height" secondItem="AD7-5g-Kla" secondAttribute="height" id="Zqy-ae-Rvn"/>
+                                    <constraint firstItem="dEb-tZ-JyL" firstAttribute="height" secondItem="AD7-5g-Kla" secondAttribute="height" id="a9G-3y-kfJ"/>
+                                    <constraint firstItem="dEb-tZ-JyL" firstAttribute="width" secondItem="AD7-5g-Kla" secondAttribute="width" id="jTw-cQ-jMt"/>
                                 </constraints>
-                                <state key="normal" title="Bow">
-                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySN-N9-B7w">
+                                <rect key="frame" x="8" y="91" width="552" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLw-N6-RIp">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="30"/>
+                                        <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Left"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1F-FT-YjJ">
+                                        <rect key="frame" x="184" y="0.0" width="184" height="30"/>
+                                        <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Stop"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-c2-1lY">
+                                        <rect key="frame" x="368" y="0.0" width="184" height="30"/>
+                                        <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Right"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VfR-c2-1lY" firstAttribute="height" secondItem="KLw-N6-RIp" secondAttribute="height" id="3pg-GL-uNf"/>
+                                    <constraint firstItem="c1F-FT-YjJ" firstAttribute="width" secondItem="KLw-N6-RIp" secondAttribute="width" id="R0r-il-IcW"/>
+                                    <constraint firstItem="c1F-FT-YjJ" firstAttribute="height" secondItem="KLw-N6-RIp" secondAttribute="height" id="gbO-79-tF8"/>
+                                    <constraint firstItem="VfR-c2-1lY" firstAttribute="width" secondItem="KLw-N6-RIp" secondAttribute="width" id="wqF-CO-HZu"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPs-M1-gva">
+                                <rect key="frame" x="8" y="129" width="552" height="30"/>
+                                <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Bend Back"/>
                             </button>
+                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ktc-bj-88j">
+                                <rect key="frame" x="8" y="167" width="552" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="t5X-P7-8gG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="42L-hd-6lf"/>
-                            <constraint firstItem="t5X-P7-8gG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Eo9-v2-ytv"/>
-                            <constraint firstAttribute="trailing" secondItem="t5X-P7-8gG" secondAttribute="trailing" constant="8" id="PEL-uz-kQ5"/>
-                            <constraint firstItem="t5X-P7-8gG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="Rxg-UG-vhg"/>
-                            <constraint firstItem="t5X-P7-8gG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="8" id="a7c-AY-9aZ"/>
-                            <constraint firstItem="t5X-P7-8gG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="8" id="jgI-q2-MM5"/>
-                            <constraint firstAttribute="trailing" secondItem="t5X-P7-8gG" secondAttribute="trailing" constant="4" id="yOk-KI-dOR"/>
+                            <constraint firstItem="ySN-N9-B7w" firstAttribute="top" secondItem="Baw-LW-iJR" secondAttribute="bottom" constant="8" id="BLP-mb-VFo"/>
+                            <constraint firstItem="ySN-N9-B7w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Cgs-oT-12j"/>
+                            <constraint firstAttribute="trailing" secondItem="uPs-M1-gva" secondAttribute="trailing" constant="8" id="DKH-A2-5bk"/>
+                            <constraint firstAttribute="trailing" secondItem="ySN-N9-B7w" secondAttribute="trailing" constant="8" id="G19-qy-juB"/>
+                            <constraint firstItem="ZRx-Yx-vyS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="MC5-yP-Vbd"/>
+                            <constraint firstAttribute="trailing" secondItem="Baw-LW-iJR" secondAttribute="trailing" constant="8" id="QUj-Ez-uje"/>
+                            <constraint firstItem="uPs-M1-gva" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="SbD-7f-gVm"/>
+                            <constraint firstItem="ZRx-Yx-vyS" firstAttribute="top" secondItem="7fh-lf-RAh" secondAttribute="bottom" constant="8" id="YxF-Ix-BQz"/>
+                            <constraint firstAttribute="trailing" secondItem="ySN-N9-B7w" secondAttribute="trailing" constant="8" id="buj-aI-taf"/>
+                            <constraint firstItem="uPs-M1-gva" firstAttribute="top" secondItem="ySN-N9-B7w" secondAttribute="bottom" constant="8" id="fQz-bw-1cO"/>
+                            <constraint firstItem="Baw-LW-iJR" firstAttribute="top" secondItem="ZRx-Yx-vyS" secondAttribute="bottom" constant="8" id="hUP-NW-I8t"/>
+                            <constraint firstAttribute="trailing" secondItem="ZRx-Yx-vyS" secondAttribute="trailing" constant="8" id="hgG-6m-9ve"/>
+                            <constraint firstAttribute="trailing" secondItem="Ktc-bj-88j" secondAttribute="trailing" constant="8" id="jif-22-Fz8"/>
+                            <constraint firstItem="ySN-N9-B7w" firstAttribute="top" secondItem="ZRx-Yx-vyS" secondAttribute="bottom" constant="53" id="kzb-Im-3zo"/>
+                            <constraint firstAttribute="trailing" secondItem="ZRx-Yx-vyS" secondAttribute="trailing" constant="8" id="vQg-ud-6TA"/>
+                            <constraint firstItem="Baw-LW-iJR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="y1s-Hr-BHF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="132.68365817091455"/>
+            <point key="canvasLocation" x="123.59154929577466" y="69.375"/>
         </scene>
     </scenes>
 </document>
