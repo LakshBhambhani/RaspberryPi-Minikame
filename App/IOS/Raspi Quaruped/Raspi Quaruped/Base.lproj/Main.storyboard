@@ -30,6 +30,9 @@
                                         <state key="normal" title="Bow">
                                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="bow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pk8-nT-1lT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -40,16 +43,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="37"/>
                                         <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Lean Left"/>
+                                        <connections>
+                                            <action selector="leanLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccu-lU-pqB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDf-vF-iat">
                                         <rect key="frame" x="184" y="0.0" width="184" height="37"/>
                                         <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Forward"/>
+                                        <connections>
+                                            <action selector="walkForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsP-QO-LnM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEb-tZ-JyL">
                                         <rect key="frame" x="368" y="0.0" width="184" height="37"/>
                                         <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Lean Right"/>
+                                        <connections>
+                                            <action selector="leanRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIz-A2-iSN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -66,16 +78,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="30"/>
                                         <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Left"/>
+                                        <connections>
+                                            <action selector="turnLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bX8-W7-JrC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1F-FT-YjJ">
                                         <rect key="frame" x="184" y="0.0" width="184" height="30"/>
                                         <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="homePos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PBA-2H-qLM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-c2-1lY">
                                         <rect key="frame" x="368" y="0.0" width="184" height="30"/>
                                         <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Right"/>
+                                        <connections>
+                                            <action selector="turnRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aY2-k7-aRQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -89,18 +110,18 @@
                                 <rect key="frame" x="8" y="129" width="552" height="30"/>
                                 <color key="backgroundColor" red="0.74570919690000004" green="0.74570919690000004" blue="0.74570919690000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Bend Back"/>
+                                <connections>
+                                    <action selector="bendBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iXS-sJ-b5b"/>
+                                </connections>
                             </button>
-                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ktc-bj-88j">
-                                <rect key="frame" x="8" y="167" width="552" height="128"/>
+                            <webView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXb-OZ-aqA">
+                                <rect key="frame" x="8" y="167" width="552" height="120"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FXb-OZ-aqA" secondAttribute="trailing" constant="8" id="7Ue-47-sjC"/>
                             <constraint firstItem="ySN-N9-B7w" firstAttribute="top" secondItem="Baw-LW-iJR" secondAttribute="bottom" constant="8" id="BLP-mb-VFo"/>
                             <constraint firstItem="ySN-N9-B7w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Cgs-oT-12j"/>
                             <constraint firstAttribute="trailing" secondItem="uPs-M1-gva" secondAttribute="trailing" constant="8" id="DKH-A2-5bk"/>
@@ -109,16 +130,28 @@
                             <constraint firstAttribute="trailing" secondItem="Baw-LW-iJR" secondAttribute="trailing" constant="8" id="QUj-Ez-uje"/>
                             <constraint firstItem="uPs-M1-gva" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="SbD-7f-gVm"/>
                             <constraint firstItem="ZRx-Yx-vyS" firstAttribute="top" secondItem="7fh-lf-RAh" secondAttribute="bottom" constant="8" id="YxF-Ix-BQz"/>
+                            <constraint firstItem="FXb-OZ-aqA" firstAttribute="top" secondItem="uPs-M1-gva" secondAttribute="bottom" constant="8" id="aIv-aT-1TM"/>
                             <constraint firstAttribute="trailing" secondItem="ySN-N9-B7w" secondAttribute="trailing" constant="8" id="buj-aI-taf"/>
                             <constraint firstItem="uPs-M1-gva" firstAttribute="top" secondItem="ySN-N9-B7w" secondAttribute="bottom" constant="8" id="fQz-bw-1cO"/>
+                            <constraint firstItem="FXb-OZ-aqA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="h9F-Hp-rQs"/>
                             <constraint firstItem="Baw-LW-iJR" firstAttribute="top" secondItem="ZRx-Yx-vyS" secondAttribute="bottom" constant="8" id="hUP-NW-I8t"/>
                             <constraint firstAttribute="trailing" secondItem="ZRx-Yx-vyS" secondAttribute="trailing" constant="8" id="hgG-6m-9ve"/>
-                            <constraint firstAttribute="trailing" secondItem="Ktc-bj-88j" secondAttribute="trailing" constant="8" id="jif-22-Fz8"/>
                             <constraint firstItem="ySN-N9-B7w" firstAttribute="top" secondItem="ZRx-Yx-vyS" secondAttribute="bottom" constant="53" id="kzb-Im-3zo"/>
                             <constraint firstAttribute="trailing" secondItem="ZRx-Yx-vyS" secondAttribute="trailing" constant="8" id="vQg-ud-6TA"/>
                             <constraint firstItem="Baw-LW-iJR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="y1s-Hr-BHF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bendBack" destination="uPs-M1-gva" id="xk6-TO-xEg"/>
+                        <outlet property="bow" destination="t5X-P7-8gG" id="7Pj-1q-j4V"/>
+                        <outlet property="homePos" destination="c1F-FT-YjJ" id="dNc-py-Ktc"/>
+                        <outlet property="leanLeft" destination="AD7-5g-Kla" id="ITl-Xi-hJR"/>
+                        <outlet property="leanRIght" destination="dEb-tZ-JyL" id="kPT-PY-FM6"/>
+                        <outlet property="turnLeft" destination="KLw-N6-RIp" id="QFO-yE-P8A"/>
+                        <outlet property="turnRight" destination="VfR-c2-1lY" id="VWT-ci-AOc"/>
+                        <outlet property="walkForward" destination="JDf-vF-iat" id="6Vz-hV-23K"/>
+                        <outlet property="webView" destination="FXb-OZ-aqA" id="aKy-hW-jN9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
