@@ -67,6 +67,9 @@ Number your servos and upload the following code to arduino to home your servos.
 
 ## Assembly
 
+### Installation of the servo on the main body
+Click the Image to watch the videos
+
 [![Watch the video](https://img.youtube.com/vi/v9tS9FaurnM/maxresdefault.jpg)](https://www.youtube.com/watch?v=v9tS9FaurnM)
 
 ## The Server
