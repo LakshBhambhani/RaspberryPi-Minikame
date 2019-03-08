@@ -67,6 +67,14 @@ Number your servos and upload the following code to arduino to home your servos.
 
 ## Assembly
 
+### Installation of the servo on the main body
+
+[![Watch the video](https://img.youtube.com/vi/v9tS9FaurnM/maxresdefault.jpg)](https://www.youtube.com/watch?v=v9tS9FaurnM)
+
+### Assembling the Legs
+
+[![Watch the video](https://img.youtube.com/vi/hzCD1UVM7dc/maxresdefault.jpg)](https://www.youtube.com/watch?v=hzCD1UVM7dc)
+
 ## The Server
 
 Execute the following in your terminal to get your server up and running. For now, you might have to execute the server python file each time your pi reboots. V2 of RaspberryPi-Minikame should get rid of that
@@ -79,7 +87,8 @@ sudo python quad.py
 
 ## The Arduino Code
 
-[Link to Quadruped Robot code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/ArduinoQuadruped/ArduinoQuadruped.ino)
+If you wish to use an arm over it, then use the code: "ArduinoQuadrupedWithArm.ino"[Link to Quadruped Robot code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/ArduinoQuadruped/ArduinoQuadrupedWithArm.ino)
+<br>Else use this code: "ArduinoQuadruped.ino" [Link to Quadruped Robot code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/ArduinoQuadruped/ArduinoQuadruped.ino)
 
 ## Raspi Quadruped App
 
