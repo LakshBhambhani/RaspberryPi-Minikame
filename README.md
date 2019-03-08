@@ -67,7 +67,7 @@ Number your servos and upload the following code to arduino to home your servos.
 
 ## Assembly
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+[![Watch the video](https://img.youtube.com/vi/v9tS9FaurnM/maxresdefault.jpg)](https://www.youtube.com/watch?v=v9tS9FaurnM)
 
 ## The Server
 
