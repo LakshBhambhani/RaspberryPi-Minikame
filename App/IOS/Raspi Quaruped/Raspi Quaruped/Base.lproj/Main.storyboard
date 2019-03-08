@@ -118,15 +118,24 @@
                                 <rect key="frame" x="8" y="167" width="552" height="120"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eV1-mB-zfh">
+                                <rect key="frame" x="8" y="167" width="552" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="FXb-OZ-aqA" secondAttribute="trailing" constant="8" id="7Ue-47-sjC"/>
                             <constraint firstItem="ySN-N9-B7w" firstAttribute="top" secondItem="Baw-LW-iJR" secondAttribute="bottom" constant="8" id="BLP-mb-VFo"/>
+                            <constraint firstAttribute="trailing" secondItem="eV1-mB-zfh" secondAttribute="trailing" constant="8" id="CAJ-Mp-9uf"/>
                             <constraint firstItem="ySN-N9-B7w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Cgs-oT-12j"/>
                             <constraint firstAttribute="trailing" secondItem="uPs-M1-gva" secondAttribute="trailing" constant="8" id="DKH-A2-5bk"/>
                             <constraint firstAttribute="trailing" secondItem="ySN-N9-B7w" secondAttribute="trailing" constant="8" id="G19-qy-juB"/>
+                            <constraint firstItem="eV1-mB-zfh" firstAttribute="top" secondItem="uPs-M1-gva" secondAttribute="bottom" constant="8" id="KHd-a8-Dbe"/>
                             <constraint firstItem="ZRx-Yx-vyS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="MC5-yP-Vbd"/>
+                            <constraint firstItem="eV1-mB-zfh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Oyz-g2-6sO"/>
                             <constraint firstAttribute="trailing" secondItem="Baw-LW-iJR" secondAttribute="trailing" constant="8" id="QUj-Ez-uje"/>
                             <constraint firstItem="uPs-M1-gva" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="SbD-7f-gVm"/>
                             <constraint firstItem="ZRx-Yx-vyS" firstAttribute="top" secondItem="7fh-lf-RAh" secondAttribute="bottom" constant="8" id="YxF-Ix-BQz"/>
@@ -147,6 +156,7 @@
                         <outlet property="homePos" destination="c1F-FT-YjJ" id="dNc-py-Ktc"/>
                         <outlet property="leanLeft" destination="AD7-5g-Kla" id="ITl-Xi-hJR"/>
                         <outlet property="leanRIght" destination="dEb-tZ-JyL" id="kPT-PY-FM6"/>
+                        <outlet property="textField" destination="eV1-mB-zfh" id="N6e-Ti-d1b"/>
                         <outlet property="turnLeft" destination="KLw-N6-RIp" id="QFO-yE-P8A"/>
                         <outlet property="turnRight" destination="VfR-c2-1lY" id="VWT-ci-AOc"/>
                         <outlet property="walkForward" destination="JDf-vF-iat" id="6Vz-hV-23K"/>
