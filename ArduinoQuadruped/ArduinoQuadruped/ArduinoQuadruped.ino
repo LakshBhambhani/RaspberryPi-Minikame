@@ -41,35 +41,31 @@ void loop()
       }
       else if (serIn == "2") {
         Serial.println("Turning Left");
-        for (int i = 0; i < 5; i++) {
-          turnLeft();
-        }
+        turnLeft(7);
       }
-      else if(serIn == "3"){
+      else if (serIn == "3") {
         Serial.println("Turning Right");
-        for (int i = 0; i < 5; i++) {
-          turnRight();
-        }
+        turnRight(7);
       }
-      else if(serIn == "4"){
+      else if (serIn == "4") {
         Serial.println("Leaning Right");
         for (int i = 0; i < 10; i++) {
           leanRight();
         }
       }
-      else if(serIn == "5"){
+      else if (serIn == "5") {
         Serial.println("Leaning Left");
         leanLeft();
       }
-      else if(serIn == "6"){
+      else if (serIn == "6") {
         Serial.println("Switching to Home Position");
         homePos();
       }
-      else if(serIn == "7"){
+      else if (serIn == "7") {
         Serial.println("Bowing");
         bow();
       }
-      else if(serIn == "8"){
+      else if (serIn == "8") {
         Serial.println("Bending Back");
         bendBack();
       }
@@ -133,106 +129,110 @@ void bendBack()
   BR_FOOT.write(140);
 }
 
-void turnLeft()
+void turnLeft(int x)
 {
-  // Front left and back right leg
-  // raises the foot in air
-  FL_FOOT.write(130);
-  BR_FOOT.write(130);
+  for (int i = 0; i < x; i++) {
+    // Front left and back right leg
+    // raises the foot in air
+    FL_FOOT.write(130);
+    BR_FOOT.write(130);
 
-  delay(200);
+    delay(200);
 
-  // turns the hip around
-  FL_HIP.write(0);
-  BR_HIP.write(0);
+    // turns the hip around
+    FL_HIP.write(0);
+    BR_HIP.write(0);
 
-  delay(200);
+    delay(200);
 
-  // puts the foot down again
-  FL_FOOT.write(110);
-  BR_FOOT.write(110);
+    // puts the foot down again
+    FL_FOOT.write(110);
+    BR_FOOT.write(110);
 
-  delay(200);
+    delay(200);
 
-  // puts the hip back in original place
-  FL_HIP.write(40);
-  BR_HIP.write(40);
+    // puts the hip back in original place
+    FL_HIP.write(40);
+    BR_HIP.write(40);
 
-  delay(200);
+    delay(200);
 
-  // Front Right and Back Left Leg
-  // raises the foot in air
-  FR_FOOT.write(50);
-  BL_FOOT.write(50);
+    // Front Right and Back Left Leg
+    // raises the foot in air
+    FR_FOOT.write(50);
+    BL_FOOT.write(50);
 
-  delay(200);
+    delay(200);
 
-  // turns the hip around
-  FR_HIP.write(180);
-  BL_HIP.write(180);
+    // turns the hip around
+    FR_HIP.write(180);
+    BL_HIP.write(180);
 
-  delay(200);
+    delay(200);
 
-  // puts the foot down again
-  FR_FOOT.write(70);
-  BL_FOOT.write(70);
+    // puts the foot down again
+    FR_FOOT.write(70);
+    BL_FOOT.write(70);
 
-  delay(200);
+    delay(200);
 
-  // puts the hip back in original place
-  FR_HIP.write(130);
-  BL_HIP.write(130);
+    // puts the hip back in original place
+    FR_HIP.write(130);
+    BL_HIP.write(130);
+  }
 }
 
-void turnRight()
+void turnRight(int x)
 {
-  // Front left and back right leg
-  //raises the foot in air
-  FL_FOOT.write(130);
-  BR_FOOT.write(130);
+  for (int i = 0; i < x; i++) {
+    // Front left and back right leg
+    //raises the foot in air
+    FL_FOOT.write(130);
+    BR_FOOT.write(130);
 
-  delay(200);
+    delay(200);
 
-  // turns the hip around
-  FL_HIP.write(10);
-  BR_HIP.write(10);
+    // turns the hip around
+    FL_HIP.write(10);
+    BR_HIP.write(10);
 
-  delay(200);
+    delay(200);
 
-  // puts the foot down again
-  FL_FOOT.write(110);
-  BR_FOOT.write(110);
+    // puts the foot down again
+    FL_FOOT.write(110);
+    BR_FOOT.write(110);
 
-  delay(200);
+    delay(200);
 
-  // puts the hip back in original place
-  FL_HIP.write(40);
-  BR_HIP.write(40);
+    // puts the hip back in original place
+    FL_HIP.write(40);
+    BR_HIP.write(40);
 
-  delay(200);
+    delay(200);
 
-  // Front Right and Back Left Leg
-  // raises the foot in air
-  FR_FOOT.write(50);
-  BL_FOOT.write(50);
+    // Front Right and Back Left Leg
+    // raises the foot in air
+    FR_FOOT.write(50);
+    BL_FOOT.write(50);
 
-  delay(200);
+    delay(200);
 
-  // turns the hip around
-  FR_HIP.write(80);
-  BL_HIP.write(80);
+    // turns the hip around
+    FR_HIP.write(80);
+    BL_HIP.write(80);
 
-  delay(200);
+    delay(200);
 
-  // puts the foot down again
-  FR_FOOT.write(70);
-  BL_FOOT.write(70);
+    // puts the foot down again
+    FR_FOOT.write(70);
+    BL_FOOT.write(70);
 
-  delay(200);
+    delay(200);
 
-  // puts the hip back in original place
-  FR_HIP.write(130);
-  BL_HIP.write(130);
+    // puts the hip back in original place
+    FR_HIP.write(130);
+    BL_HIP.write(130);
+  }
 }
 
 void walkForward()
@@ -273,12 +273,12 @@ void walkForward()
 
 }
 
-void pushUp(){
+void pushUp() {
   FL_HIP.write(130);
   FL_FOOT.write(130);
   FR_HIP.write(30);
   FR_FOOT.write(50);
-  
+
   BL_HIP.write(170);
   BL_FOOT.write(50);
   BR_HIP.write(10);
@@ -286,15 +286,21 @@ void pushUp(){
 
   delay(1000);
 
-  for(int i = 0; i < 5; i++){
-    for(int k = 0; k < 25; k++){
+  for (int i = 0; i < 5; i++) {
+    for (int k = 0; k < 25; k++) {
       FL_FOOT.write(130 + k);
       FR_FOOT.write(50 - k);
       delay(200);
     }
-    for(int k = 0; k < 25; k++){
+    for (int k = 0; k < 25; k++) {
       FL_FOOT.write(155 - k);
       FR_FOOT.write(25 + k);
+      delay(200);
     }
   }
+}
+
+void jump() {
+  BL_HIP.write(40);
+  BR_HIP.write(140);
 }
