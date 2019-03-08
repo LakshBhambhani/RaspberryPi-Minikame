@@ -272,3 +272,29 @@ void walkForward()
   delay(200);
 
 }
+
+void pushUp(){
+  FL_HIP.write(130);
+  FL_FOOT.write(130);
+  FR_HIP.write(30);
+  FR_FOOT.write(50);
+  
+  BL_HIP.write(170);
+  BL_FOOT.write(50);
+  BR_HIP.write(10);
+  BR_FOOT.write(130);
+
+  delay(1000);
+
+  for(int i = 0; i < 5; i++){
+    for(int k = 0; k < 25; k++){
+      FL_FOOT.write(130 + k);
+      FR_FOOT.write(50 - k);
+      delay(200);
+    }
+    for(int k = 0; k < 25; k++){
+      FL_FOOT.write(155 - k);
+      FR_FOOT.write(25 + k);
+    }
+  }
+}

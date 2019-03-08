@@ -135,6 +135,7 @@ void loop()
           leanDemo();
         }
       }
+      }
     }
   }
 }
