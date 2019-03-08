@@ -51,21 +51,21 @@ void loop()
       String serIn = Serial.readString();
       if (serIn == "1") {
         Serial.println("Walking Forward");
-        for (int i = 0; i < 10; i++) {
+        do
           walkForward();
-        }
+        }while(Serial.available() < 0);
       }
       else if (serIn == "2") {
         Serial.println("Turning Left");
-        for (int i = 0; i < 10; i++) {
+        do
           turnLeft();
-        }
+        }while(Serial.available() < 0);
       }
       else if(serIn == "3"){
         Serial.println("Turning Right");
-        for (int i = 0; i < 10; i++) {
+        do
           turnRight();
-        }
+        }while(Serial.available() < 0);
       }
       else if(serIn == "4"){
         Serial.println("Leaning Right");
