@@ -30,7 +30,7 @@ Download the Arduino IDE Linux-ARM version on your Raspberry Pi
 
 ### Serial Communication Check (optional)
 1) Upload the "PiArduinoCommunicationTest.ino" which is in "RaspberryPi-Minikame/Pre-Assembly Checks/Serial Communication Check/" to your Arduino Board.
-2) Open a new terminal on your Raspberry Pi adn execute the following:
+2) Open a new terminal on your Raspberry Pi and execute the following:
 
 ```
 sudo apt-get update 
