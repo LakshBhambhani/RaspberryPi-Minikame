@@ -73,7 +73,7 @@ Number your servos and upload the following code to arduino to home your servos.
 
 ### Assembling the Legs
 
-[![Watch the video](https://img.youtube.com/vi/hzCD1UVM7dc/maxresdefault.jpg)](https://www.youtube.com/watch?v=hzCD1UVM7dc)
+[![Watch the video](https://img.youtube.com/vi/2WhtllfKDsU/maxresdefault.jpg)](https://www.youtube.com/watch?v=2WhtllfKDsU)
 
 ### Wiring
 
