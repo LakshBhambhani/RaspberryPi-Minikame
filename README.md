@@ -92,6 +92,8 @@ If you wish to use an arm over it, then use the code: "ArduinoQuadrupedWithArm.i
 
 ## Raspi Quadruped App
 
-You can either modify the app for yourself using the files in the [App Folder](https://github.com/LakshBhambhani/RaspberryPi-Minikame/tree/master/App/Android/RaspiQuadruped) or use the default provided [apk](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/App/Android/RaspiQuadruped.apk)
+You can either modify the app for yourself using the files in the [App Folder](https://github.com/LakshBhambhani/RaspberryPi-Minikame/tree/master/App/Android/RaspiQuadruped) or use the default provided [apk](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/App/Android/RaspiQuadruped.apk)<br>
+Alternatively, you can also use the files for IOS app, clone it in Xcode and run and install it on your phone
 
 ## ENJOY!! 
+ <b> Remember: To use it, run the server and keep your serial port of your arduino application on rpi on
