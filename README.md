@@ -12,21 +12,13 @@ Contains the code to use Minikame Mk2 using a raspberry pi
 
 | Quantity      | File           
 | ------------- | ----------------- 
-| 1             | body_base.stl    
-| 1             | body_top.stl        
-| 2             | leg.stl      
-| 2             | hips.stl      
-| 1             | body_shafts.stl     
-| 1             | arm_base.stl         
-| 2             | shoulder.stl             
-| 1             | elbow.stl        
-| 1             | claw.stl      
-| 1             | left_finger.stl         
-| 1             | right_finger.stl        
-| 1             | drive_gear.stl
-| 1             | driven_gear.stl 
+| 1             | [body_base.stl](https://www.thingiverse.com/download:6182950)    
+| 1             | [body_top.stl](https://www.thingiverse.com/download:6182951)        
+| 2             | [leg.stl](https://www.thingiverse.com/download:6182953)      
+| 2             | [hips.stl](https://www.thingiverse.com/download:6182954)      
+| 1             | [body_shafts.stl](https://www.thingiverse.com/download:6182952)     
 
-[Link to the Parts](https://www.thingiverse.com/thing:3480616)
+[Thingiverse](https://www.thingiverse.com/thing:3480616)
 
 ## Required Software
 
