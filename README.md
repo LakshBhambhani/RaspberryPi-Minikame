@@ -75,6 +75,8 @@ Number your servos and upload the following code to arduino to home your servos.
 
 [![Watch the video](https://img.youtube.com/vi/hzCD1UVM7dc/maxresdefault.jpg)](https://www.youtube.com/watch?v=hzCD1UVM7dc)
 
+### Wiring
+
 ## The Server
 
 Execute the following in your terminal to get your server up and running. For now, you might have to execute the server python file each time your pi reboots. V2 of RaspberryPi-Minikame should get rid of that
