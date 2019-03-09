@@ -26,6 +26,8 @@ Contains the code to use Minikame Mk2 using a raspberry pi
 | 1             | drive_gear.stl
 | 1             | driven_gear.stl 
 
+[Link to the Parts](https://www.thingiverse.com/thing:3480616)
+
 ## Required Software
 
 * Arduino IDE [Download](https://www.arduino.cc/en/Main/Software) 
