@@ -83,7 +83,7 @@ sudo python quad.py
 
 ## The Arduino Code
 
-Use this code: "ArduinoQuadruped.ino" [Link to Quadruped Robot code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/ArduinoQuadruped/ArduinoQuadruped/ArduinoQuadruped.ino)
+Use this code: "ArduinoQuadruped.ino" [Link to Quadruped Robot code](https://github.com/LakshBhambhani/RaspberryPi-Minikame/blob/master/ArduinoQuadruped/ArduinoQuadruped/ArduinoQuadruped.ino)
 
 ## Raspi Quadruped App
 
