@@ -6,7 +6,7 @@ Contains the code to use Minikame Mk2 using a raspberry pi
 * Raspberry Pi
 * Arduino
 * 3D Printed Parts
-* 12 Servo Motors from: [Amazon](https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD/ref=sr_1_1?keywords=servo+mototrs&qid=1551854557&s=gateway&sr=8-1-spell)
+* 8 Servo Motors from: [Amazon](https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD/ref=sr_1_1?keywords=servo+mototrs&qid=1551854557&s=gateway&sr=8-1-spell)
 
 ## 3D Printing
 
