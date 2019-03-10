@@ -63,7 +63,7 @@ Number your servos and upload the following code to arduino to home your servos.
 
 ### Installation of servos on the main body
 
-[![Watch the video](https://img.youtube.com/vi/v9tS9FaurnM/maxresdefault.jpg)](https://www.youtube.com/watch?v=v9tS9FaurnM)
+[![Watch the video](https://img.youtube.com/vi/FWssg-x_fkY/maxresdefault.jpg)](https://www.youtube.com/watch?v=FWssg-x_fkY)
 
 ### Assembling the Legs
 
