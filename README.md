@@ -75,7 +75,25 @@ Number your servos and upload the following code to arduino to home your servos.
 
 ### Wiring
 
+Connect the Raspberry Pi to Arduino using a USB cable
 
+Connect the Servos using the following port numbers:
+
+FL_HIP = (4);
+
+FL_FOOT = (5);
+
+FR_HIP = (6);
+
+FR_FOOT = (7);
+
+BL_HIP = (8);
+
+BL_FOOT = (9);
+
+BR_HIP = (10);
+
+BR_FOOT = (11);
 
 ## The Server
 
