@@ -69,7 +69,13 @@ Number your servos and upload the following code to arduino to home your servos.
 
 [![Watch the video](https://img.youtube.com/vi/2WhtllfKDsU/maxresdefault.jpg)](https://www.youtube.com/watch?v=2WhtllfKDsU)
 
+### Joining the Legs and Base
+
+[![Watch the video](https://img.youtube.com/vi/XDWaa8SKG/maxresdefault.jpg)](https://youtu.be/XDWaa8SKG-s)
+
 ### Wiring
+
+
 
 ## The Server
 
